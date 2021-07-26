@@ -24,7 +24,7 @@ export class AppComponent {
       name: "Device02",
       brand: "Inspiron",
       model: "DTR675",
-      year: 1999,
+      year: 2000,
       serial: "Tr56Y"
     }
     
