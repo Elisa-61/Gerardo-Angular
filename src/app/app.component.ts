@@ -45,6 +45,7 @@ export class AppComponent {
     console.log(this.newSelectedDevice);
     console.log(id);
    }
+   
    updateDisplay(updated:Device){
     this.showUpdate=false;
     let n = this.devices.findIndex(device => device.id == updated.id)
