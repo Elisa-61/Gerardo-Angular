@@ -1,5 +1,25 @@
 {{title}}
-<!-- <app-third (thirdEvent)="appEvent($event)"></app-third> -->
-<app-first (firstEvent)="appEvent($event)"></app-first>
-<app-second [secondMessage]="appMessage"></app-second>
+<h1> Device Details View</h1>
+<div *ngIf="!showUpdate">
+    <div *ngFor="let device of devices">
+        <app-device-details [deviceDetail]="device" (updateDetails)="updateDevice($event)"></app-device-details>
+    </div>
+</div>
+
+<div *ngIf="showUpdate">
+<app-reactive-form
+    [device]="newSelectedDevice"
+    (update)= "updateDisplay($event)"
+></app-reactive-form>
+</div>
+
+
 <router-outlet></router-outlet>
+
+
+<!-- <div>
+    <app-template-form (deviceDetails)=addDevice($event)></app-template-form> 
+</div> -->
+<!-- <div>
+    <app-template-form></app-template-form>
+</div> -->
